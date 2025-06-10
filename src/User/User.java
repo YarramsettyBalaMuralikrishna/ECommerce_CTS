@@ -15,4 +15,6 @@ public class User{
     public int getAge() { return age;}
     public String getEmail() {return email;}
     public String getAddress() {return address;}
+
+    // implement setters also
 }

@@ -35,4 +35,6 @@ public class UserDetails implements UserService {
                     user.getMobile()+" "+user.getAddress());
         }
     }
+    // update userDetails
+    // delete user by their email
 }

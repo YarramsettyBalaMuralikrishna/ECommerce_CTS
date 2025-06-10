@@ -1,0 +1,80 @@
+-- create database dummyEcommerce;
+-- use dummyEcommerce;
+
+-- create table productDetails(
+-- 	productID int primary key,
+--     productName varchar(100) not null,
+--     productPrice  decimal(10,2) not null,
+--     productDescription varchar(1000) not null,
+--     imageUrl varchar(1000) not null,
+--     reviews text
+-- );
+
+--  create table userDetails(
+-- 	  userID varchar(10) primary key,
+--  	  email varchar(50) not null,
+--        mobile int not null,
+--       firstName varchar(100) not null,
+--       lastName varchar(100) not null,
+--       age int not null check( age >= 5),
+--       address varchar(1000) not null
+--  );
+
+--  INSERT INTO userDetails (userID, email, mobile, firstName, lastName, age, address) VALUES
+--  ('asdfs24', 'muzeeb@gmail.com', 6578, 'muzeeb', 'shaik', 22, 'gnt'),
+--  ('24dfst', 'hemanth@gmail.com', 4567, 'hemanth', 'nandavarapu', 22, 'gnt'),
+--  ('qwer456', 'bhargav@gmail.com', 452, 'bhargav', 'meka', 21, 'vyur'),
+--  ('wer45', 'puneeth@gmail.com', 12451, 'puneeth', 'ponaganti', 22, 'tenali'),
+--  ('3452ret2', 'jashwanth@gmail.com', 2456, 'jashwanth', 'mullapudi', 21, 'gnt'),
+--  ( 'ert45','dheeraj@gmail.com', 78907, 'dheeraj', 'meduri', 22, 'gnt'),
+--  ( 'dfgh567','kaushik@gmail.com', 7699, 'kaushik', 'modukuru', 22, 'vij'),
+--  ( 'sdfgh45','mansoor@gmail.com', 6587, 'mansoor', 'shaik', 21, 'ponnur'),
+--  ( '234rtf','tanishq@gmail.com', 456, 'tanishq', 'visamilla', 21, 'vij'),
+--  ( 'refg354','gowtham@gmail.com', 242, 'gowtham', 'ravuri', 22, 'vij');
+--  select * from userDetails;
+
+-- --  productDetails
+--  INSERT INTO productDetails (productID, productName, productPrice, productDescription, imageUrl, reviews) VALUES
+--  (1, 'Bluetooth Speaker', 1499.99, 'Portable wireless speaker with deep bass', '/images/speaker1.jpg', 'Great sound for the price!'),
+--  (2, 'Wireless Mouse', 699.50, 'Ergonomic mouse with 2.4GHz connectivity', '/images/mouse1.jpg', 'Works well, good grip.'),
+--  (3, 'Laptop Stand', 1299.00, 'Adjustable aluminum laptop stand', '/images/stand1.jpg', 'Perfect height and sturdy.'),
+--  (4, 'Smart Watch', 3499.99, 'Fitness tracker with heart monitor', '/images/watch1.jpg', 'Battery lasts long.'),
+--  (5, 'USB-C Hub', 899.99, '5-in-1 Type-C hub with HDMI & USB ports', '/images/hub1.jpg', 'A must-have for MacBooks.'),
+--  (6, 'Gaming Keyboard', 2999.00, 'RGB backlit mechanical keyboard', '/images/keyboard1.jpg', 'Clicky keys, feels premium.'),
+--  (7, 'Noise Cancelling Headphones', 4999.99, 'Over-ear with ANC and Bluetooth', '/images/headphones1.jpg', 'Amazing sound quality.'),
+--  (8, 'Power Bank', 1199.00, '20000mAh fast-charging power bank', '/images/powerbank1.jpg', 'Charges fast, good build.'),
+--  (9, 'Webcam', 1399.00, '1080p Full HD USB webcam', '/images/webcam1.jpg', 'Clear video for meetings.'),
+--  (10, 'Phone Tripod', 599.00, 'Lightweight with phone mount', '/images/tripod1.jpg', 'Useful for vloggers.'),
+--  (11, 'LED Desk Lamp', 799.00, 'Touch control with adjustable brightness', '/images/lamp1.jpg', 'Good for night study.'),
+--  (12, 'External Hard Drive', 4599.00, '1TB USB 3.0 external drive', '/images/harddrive1.jpg', 'Fast file transfers.'),
+--  (13, 'Smart Plug', 999.00, 'WiFi plug with app control', '/images/plug1.jpg', 'Works with Alexa.'),
+--  (14, 'Wireless Charger', 1299.00, 'Fast Qi-enabled wireless pad', '/images/charger1.jpg', 'Convenient for bedside use.'),
+--  (15, 'Graphic Tablet', 3599.00, 'Drawing pad with pressure sensitivity', '/images/tablet1.jpg', 'Perfect for artists.'),
+--  (16, 'HDMI Cable', 299.00, '1.5m high-speed HDMI 2.0 cable', '/images/hdmi1.jpg', 'Good for 4K TV.'),
+--  (17, 'VR Headset', 7999.00, 'Immersive VR gaming experience', '/images/vr1.jpg', 'Worth every rupee.'),
+--  (18, 'Fitness Band', 2499.00, 'Tracks steps, sleep, and heart rate', '/images/fitband1.jpg', 'Very accurate tracker.'),
+--  (19, 'Portable Projector', 6999.00, 'Mini HD projector with HDMI support', '/images/projector1.jpg', 'Great for movie nights.'),
+--  (20, 'Bluetooth Earbuds', 1599.00, 'True wireless stereo with charging case', '/images/earbuds1.jpg', 'Compact and stylish.');
+
+
+-- create table orders(
+-- 	orderID int primary key,
+--     totalAmount DECIMAL(10,2),
+--     userID varchar(50) not null,
+--     orderDate date,
+--     foreign key (userID) references userDetails(userID)
+-- );
+
+
+-- create table orderDetails(
+--  orderItemID int primary key,
+--  orderID int not null,
+--  foreign key (orderID) references orders(orderID),
+--  productID int not null,
+--  foreign key (productID) references productDetails(productID),
+--  quantity int check(quantity > 0),
+--  unitPrice decimal(10,2) not null check(unitPrice > 0)
+-- );
+
+
+

@@ -21,4 +21,6 @@ public class Product {
     public double getPrice() {return price;}
     public String getDescription(){ return  description;}
     public String getReviews(){return reviews;}
+
+    // setters implementation ..........
 }
