@@ -1,0 +1,64 @@
+Ah, now that you need to return a java.sql.Date (for example, for inserting into a SQL database),
+but are currently working with a String in "dd-MM-yyyy" format, here's how you can correctly
+
+    private void garbageCode(){
+        //        String url = "jdbc:mysql://localhost:3306/dummyEcommerce", password = "bala1618", user = "root";
+//        // load the driver
+//        Class.forName("com.mysql.jdbc.Driver");
+//        Connection con = DriverManager.getConnection(url, user, password);
+//        Statement st = con.createStatement();
+//        ResultSet res = st.executeQuery("select * from userdetails");
+//        while(res.next()){
+//            System.out.println(res.getString(1) +" "+res.getString(2));
+//        }
+
+        //        ----------updated successfully and retrived done
+//        ProductDetails prod = new ProductDetails();
+//        prod.addProduct(new Product(100, 84.59, "apple", "good apple ", "https://apple.jpeg","great taste") );
+//        prod.getAllProducts();
+//        -----------------------
+//        UserDetails user = new UserDetails();
+//        user.addUser(new User(987654321, 22,
+//                "Bala", "Y",
+//                "asdfasf asfsd", "bala@mail.com"));
+//        user.addUser(new User(987654321, 22,
+//                "Murali", "Y",
+//                "asdfasf asfsd", "murali@mail.com"));
+//        user.printAllUsers();
+//        user.addUser(new User(987654321, 22,
+//                "Krishna", "Y",
+//                "asdfasf asfsd", "krishna@mail.com"));
+//        user.printAllUsers();
+//        --------product-----------
+//        ProductDetails prod = new ProductDetails();
+//        prod.addProduct(new Product(
+//        1234, 456.3210, "Bat", "englishwillow bat",
+//                "https:bat.123.jpeg", " great stroke"
+//        ));
+//        prod.addProduct(new Product(
+//                124, 526.3210, "Ball", "ensdfishwillow bat",
+//                "https:ball.123.jpeg", " original piece"
+//        ));
+//        prod.getAllProducts();
+//        ---------------order-------------
+//        List<int[]> receivedItems = new ArrayList<>();
+//        // prodID, quantity, unitCost
+//        receivedItems.add(new int[] {101, 2, 123});
+//        receivedItems.add(new int[] {102, 3, 789});
+//        receivedItems.add(new int[] {103, 1, 4560});
+//        AddOrders placeOrder = new AddOrders();
+//        placeOrder.addOrder(new Order(1,"123","9-6-25", receivedItems));
+//        receivedItems.clear();
+//        receivedItems.add(new int[] {104, 5, 12});
+//        receivedItems.add(new int[] {105, 4, 79});
+//        receivedItems.add(new int[] {106, 3, 450});
+//        placeOrder.addOrder(new Order(2,"178","19-1-25", receivedItems));
+//
+//        placeOrder.getAllOrdersWithProducts();
+//        placeOrder.displayOrders("178");
+
+//        for(Product product: allProducts){
+//            System.out.println(product.getProductName()+" "+product.getPrice()+" "+
+//                    product.getDescription()+" "+product.getReviews());
+//        }
+    }

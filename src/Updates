@@ -1,0 +1,8 @@
+send only productID's and try to get all the remainig info from the product tab.....just try
+
+SET SQL_SAFE_UPDATES = 0||1; ->
+You are using safe update mode and tried to update a table without a WHERE that uses a KEY column.
+
+This is a safety feature to avoid accidentally deleting all rows from a table — especially in production.
+
+
