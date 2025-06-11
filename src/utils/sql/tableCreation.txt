@@ -11,8 +11,8 @@
 -- );
 
 --  create table userDetails(
--- 	  userID varchar(10) primary key,
---  	  email varchar(50) not null,
+-- 	  userID varchar(100) primary key,
+--  	  email varchar(500) not null,
 --        mobile int not null,
 --       firstName varchar(100) not null,
 --       lastName varchar(100) not null,
@@ -73,7 +73,8 @@
 --  productID int not null,
 --  foreign key (productID) references productDetails(productID),
 --  quantity int check(quantity > 0),
---  unitPrice decimal(10,2) not null check(unitPrice > 0)
+--  unitPrice decimal(10,2) not null check(unitPrice > 0),
+-- productName varchar(50) not null
 -- );
 
 

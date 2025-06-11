@@ -7,8 +7,8 @@ public class Order {
     private double totalAmount;
     private String userID, orderItemID;
     private java.sql.Date orderDate;
-    private List<int[]> orderedItems = new ArrayList<>();
-    public Order(int orderID, String userID, java.sql.Date orderDate, List<int[]> receivedItems){
+    private List<OrderedItem> orderedItems = new ArrayList<>();
+    public Order(int orderID, String userID, java.sql.Date orderDate, List<OrderedItem> receivedItems){
         this.orderID = orderID;
 //        this.totalAmount = totalAmount;
         this.userID = userID;
@@ -18,9 +18,9 @@ public class Order {
     }
     public int getOrderID(){return orderID;}
     public double getTotalAmount(){
-        for(int[] i: orderedItems){
-            int quantity = i[1];
-            double unitCost = i[2];
+        for(OrderedItem orr: orderedItems){
+            int quantity = orr.getQuantity();
+            double unitCost = orr.getPrice();
             totalAmount+=(quantity* unitCost);
         }
         return totalAmount;
@@ -30,6 +30,6 @@ public class Order {
         return orderDate;
     }
     public String getOrderItemID(){return orderItemID;}
-    public List<int[]> getOrderedProducts(){return orderedItems;}
+    public List<OrderedItem> getOrderedProducts(){return orderedItems;}
 
 }

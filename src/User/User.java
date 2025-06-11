@@ -16,5 +16,12 @@ public class User{
     public String getEmail() {return email;}
     public String getAddress() {return address;}
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
     // implement setters also
 }

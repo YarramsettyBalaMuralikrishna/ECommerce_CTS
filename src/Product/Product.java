@@ -14,7 +14,6 @@ public class Product {
         this.imageUrl= imageUrl;
         this.reviews = reviews;
     }
-
     public int getProductID() {return productID; }
     public String getImageUrl() {return imageUrl; }
     public String getProductName() {return productName; }
